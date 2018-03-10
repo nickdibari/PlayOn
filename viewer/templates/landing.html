@@ -13,7 +13,6 @@
                 <li class='song-container' style='background: {{song.color}};'>
                     <p>{{song.name}}</p>
                     <iframe src='https://embed.spotify.com/?uri={{ song.uri }}' frameborder='0' allowtransparency='true'></iframe>
-                    <img src='{{song.album}}' alt='{{song.name}}' height='80' width='80'>
                 </li>
                 {% endfor %}
                 </ul>

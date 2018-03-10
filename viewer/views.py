@@ -14,7 +14,7 @@ from viewer.forms import PlayListForm
 
 
 # Song data object to hold song attributes
-Song = namedtuple('Song', ['name', 'uri', 'album', 'color'])
+Song = namedtuple('Song', ['name', 'uri', 'color'])
 
 # CSS colors to assign to songs
 CSS_COLORS = [
@@ -59,10 +59,9 @@ def landing(request):
                 track_data = track['track']
                 uri = track_data['uri']
                 name = track_data['name']
-                album = track_data['album']['images'][0]['url']
                 color = random.choice(CSS_COLORS)
 
-                song = Song(name=name, uri=uri, album=album, color=color)
+                song = Song(name=name, uri=uri, color=color)
                 songs.append(song)
 
             # Send to play page
