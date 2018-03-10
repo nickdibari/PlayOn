@@ -55,7 +55,7 @@ def landing(request):
                 album = None
                 
                 if track_data['album']['images']:
-                    album = track_data['album']['images'][0].get('href')
+                    album = track_data['album']['images'][0]['url']
 
                 song = Song(name=name, uri=uri, album=album)
                 songs.append(song)

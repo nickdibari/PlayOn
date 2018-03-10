@@ -9,8 +9,8 @@
             {% for song in songs %}
             <div class='song-container'>
                 {{song.name}}
-                <iframe src="https://embed.spotify.com/?uri={{ song.uri }}" frameborder="0" allowtransparency="true" height="80" width="350"></iframe>
-                {{song.album}}
+                <iframe src='https://embed.spotify.com/?uri={{ song.uri }}' frameborder='0' allowtransparency='true' height='80' width='350'></iframe>
+                <img src='{{song.album}}' alt='{{song.name}}' heigh='80' width='80'>
             </div>
             {% endfor %}
             </div>
