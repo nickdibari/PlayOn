@@ -5,7 +5,6 @@ from base64 import b64encode
 from collections import namedtuple
 
 from django.conf import settings
-from django.http import HttpResponse
 from django.shortcuts import render
 import requests
 
@@ -25,13 +24,13 @@ def landing(request):
 
         if form.is_valid():
             playlist_string = form.cleaned_data['playlist_uri']
-            
+
             # Pull relevant data from URI
             # Example URI: spotify:user:<user_id>:playlist:<playlist_id>
             values = playlist_string.split(':')
             user_id = values[2]
             playlist_id = values[4]
-            
+
             # Authenticate through Spotify API
             access_token = get_access_token()
 
@@ -69,7 +68,7 @@ def landing(request):
 
 
 def get_access_token():
-    """Get access token for Spotify from client ID and secret specified in 
+    """Get access token for Spotify from client ID and secret specified in
     configuration file. Return access token which is needed to access the
     Spotify API"""
     auth_string = '{client_id}:{client_secret}'.format(
