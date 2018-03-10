@@ -44,7 +44,7 @@ ROOT_URLCONF = 'playon.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['viewer/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
