@@ -9,7 +9,7 @@
             {% for song in songs %}
             <div class='song-container'>
                 {{song.name}}
-                {{song.uri}}
+                <iframe src="https://embed.spotify.com/?uri={{ song.uri }}" frameborder="0" allowtransparency="true" height="80" width="350"></iframe>
                 {{song.album}}
             </div>
             {% endfor %}
