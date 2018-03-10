@@ -22,9 +22,18 @@ p {
     color: #ffffff;
 }
 
+h1 {
+    margin-left: 2%;
+    font-size: 40px;
+}
+
 iframe {
     height: 80px;
     width: 500px;
+}
+
+#song-section {
+    margin-left: 5%;
 }
 
 .song-container {
