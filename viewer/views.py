@@ -52,10 +52,7 @@ def landing(request):
                 track_data = track['track']
                 uri = track_data['uri']
                 name = track_data['name']
-                album = None
-                
-                if track_data['album']['images']:
-                    album = track_data['album']['images'][0]['url']
+                album = track_data['album']['images'][0]['url']
 
                 song = Song(name=name, uri=uri, album=album)
                 songs.append(song)
