@@ -72,6 +72,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Spotify API
-SPOTIFY_BASE_URL = 'https://api.spotify.com/v1/'
+SPOTIFY_BASE_URL = 'https://api.spotify.com/v1'
 SPOTIFY_ID = SPOTIFY_CLIENT_ID
 SPOTIFY_KEY = SPOTIFY_SECRET_KEY

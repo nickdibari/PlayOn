@@ -4,6 +4,17 @@
     </head>
     <body>
         <h1>PlayOn</h1>
+        {% if songs %}
+            <div id='song-section'>
+            {% for song in songs %}
+            <div class='song-container'>
+                {{song.name}}
+                {{song.uri}}
+                {{song.album}}
+            </div>
+            {% endfor %}
+            </div>
+        {% endif %}
         <h2>What playlist would you like to view?</h2>
         <form action='/viewer' method='GET'>
             {{ form }}
