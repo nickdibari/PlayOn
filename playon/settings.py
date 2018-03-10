@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'viewer',
 ]
 
 MIDDLEWARE = [
@@ -70,6 +71,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# Spotify API Keys
+# Spotify API
+SPOTIFY_BASE_URL = 'https://api.spotify.com/v1/'
 SPOTIFY_ID = SPOTIFY_CLIENT_ID
 SPOTIFY_KEY = SPOTIFY_SECRET_KEY
