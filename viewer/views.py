@@ -3,10 +3,10 @@ from __future__ import unicode_literals
 
 from base64 import b64encode
 from collections import namedtuple
+import requests
 
 from django.conf import settings
 from django.shortcuts import render
-import requests
 
 from viewer.forms import PlayListForm
 
