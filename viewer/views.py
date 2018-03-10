@@ -17,7 +17,10 @@ from viewer.forms import PlayListForm
 Song = namedtuple('Song', ['name', 'uri', 'album', 'color'])
 
 # CSS colors to assign to songs
-CSS_COLORS = ['red', 'blue', 'aqua', 'green', 'crimson', 'fuchsia', 'orange']
+CSS_COLORS = [
+    'red', 'blue', 'darkgreen', 'green', 'crimson', 'fuchsia',
+    'orange', 'purple'
+]
 
 def landing(request):
     ctx = {}
