@@ -1,18 +1,22 @@
 <html>
     <head>
         <title>PlayOn</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href='{% static 'style.css' %}'>
     </head>
     <body>
         <h1>PlayOn</h1>
         {% if songs %}
             <div id='song-section'>
-            {% for song in songs %}
-            <div class='song-container'>
-                {{song.name}}
-                <iframe src='https://embed.spotify.com/?uri={{ song.uri }}' frameborder='0' allowtransparency='true' height='80' width='350'></iframe>
-                <img src='{{song.album}}' alt='{{song.name}}' heigh='80' width='80'>
-            </div>
-            {% endfor %}
+                <ul>
+                {% for song in songs %}
+                <li class='song-container'>
+                    <p>{{song.name}}</p>
+                    <iframe src='https://embed.spotify.com/?uri={{ song.uri }}' frameborder='0' allowtransparency='true' height='80' width='350'></iframe>
+                    <img src='{{song.album}}' alt='{{song.name}}' height='80' width='80'>
+                </li>
+                {% endfor %}
+                </ul>
             </div>
         {% endif %}
         <h2>What playlist would you like to view?</h2>
