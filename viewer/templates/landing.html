@@ -10,7 +10,7 @@
             <div id='song-section'>
                 <ul>
                 {% for song in songs %}
-                <li class='song-container'>
+                <li class='song-container' style='background: {{song.color}};'>
                     <p>{{song.name}}</p>
                     <iframe src='https://embed.spotify.com/?uri={{ song.uri }}' frameborder='0' allowtransparency='true' height='80' width='350'></iframe>
                     <img src='{{song.album}}' alt='{{song.name}}' height='80' width='80'>

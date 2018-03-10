@@ -3,6 +3,8 @@ from __future__ import unicode_literals
 
 from base64 import b64encode
 from collections import namedtuple
+import random
+
 import requests
 
 from django.conf import settings
@@ -11,8 +13,11 @@ from django.shortcuts import render
 from viewer.forms import PlayListForm
 
 
-Song = namedtuple('Song', ['name', 'uri', 'album'])
+# Song data object to hold song attributes
+Song = namedtuple('Song', ['name', 'uri', 'album', 'color'])
 
+# CSS colors to assign to songs
+CSS_COLORS = ['red', 'blue', 'aqua', 'green', 'crimson', 'fuchsia', 'orange']
 
 def landing(request):
     ctx = {}
@@ -52,8 +57,9 @@ def landing(request):
                 uri = track_data['uri']
                 name = track_data['name']
                 album = track_data['album']['images'][0]['url']
+                color = random.choice(CSS_COLORS)
 
-                song = Song(name=name, uri=uri, album=album)
+                song = Song(name=name, uri=uri, album=album, color=color)
                 songs.append(song)
 
             # Send to play page
